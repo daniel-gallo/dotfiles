@@ -10,7 +10,7 @@ while [ "$select" != "LOCK" -a "$select" != "SUSPEND" -a "$select" != "POWER OFF
 done
 case $select in
     "LOCK")
-        /home/daniel/.config/i3/lock.sh
+        $HOME/.config/i3/lock.sh
         ;;
     "SUSPEND")
         systemctl suspend
