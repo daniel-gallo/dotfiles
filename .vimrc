@@ -10,6 +10,8 @@ set shiftwidth=4
 set expandtab
 "Tab will insert 4 spaces
 set softtabstop=4
+"Tabs will be tabs on Makefile files
+autocmd FileType make setlocal noexpandtab
 "Enable automatic indentation
 set autoindent
 set smartindent
