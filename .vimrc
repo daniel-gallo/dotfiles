@@ -12,7 +12,10 @@ set expandtab
 set softtabstop=4
 "Tabs will be tabs on Makefile files
 autocmd FileType make setlocal noexpandtab
+" More powerful backspacing
+set backspace=indent,eol,start
 "Enable automatic indentation
 set autoindent
 set smartindent
 set cindent
+
