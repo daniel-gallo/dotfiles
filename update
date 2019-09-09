@@ -1,0 +1,25 @@
+#!/bin/bash
+
+wd="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
+
+# Update dotfiles
+echo "Updating dotfiles..."
+git -C $wd pull
+
+# Update zsh modules
+echo "Updating zsh modules..."
+find $HOME/.zsh -name ".git" -type d | xargs -P10 -I{} git --git-dir={} pull
+
+# Update system
+if type brew &> /dev/null
+then
+    brew update
+    brew upgrade
+    brew cask upgrade
+elif type pacman &> /dev/null
+then
+    sudo pacman -Syu
+elif type yay &> /dev/null
+then
+    yay -Syu
+fi
