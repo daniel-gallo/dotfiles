@@ -19,7 +19,13 @@ source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/zsh-z/zsh-z.plugin.zsh
 
 # Color aliases
-alias ls='ls --color=auto'
+# macOS and Linux have different ls color options
+if [ "$(uname)" = "Darwin" ]
+then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=auto'
+fi
 alias grep='grep  --color=auto'
 
 # Set vim as default
