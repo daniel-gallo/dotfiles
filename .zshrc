@@ -34,6 +34,10 @@ alias svi='sudo vim'
 alias svim='sudo vim'
 alias edit='vim'
 
+# Canadian command
+alias please="sudo \$(fc -ln -1)"
+alias pls="sudo \$(fc -ln -1)"
+
 # Prompt customization
 fpath+=("$HOME/.zsh/pure")
 promptinit
