@@ -19,6 +19,35 @@ ln -s "$wd/.vimrc" ~
 if type dunst &> /dev/null
 then
     echo "Adding dunst config..."
-    mkdir ~/.config/dunst
-    ln -s "$wd/.config/dunst/dunstrc" ~/.config/dunst/dunstrc
+    mkdir -p ~/.config/dunst
+    ln -s "$wd/.config/dunst/dunstrc" ~/.config/dunst
+fi
+
+# Set up dunst
+if type i3 &> /dev/null
+then
+    echo "Adding i3 config..."
+    mkdir -p ~/.config/i3
+    ln -s "$wd/.config/i3/config" ~/.config/i3
+fi
+
+# Set up i3status
+if type i3status &> /dev/null
+then
+    echo "Adding i3status config..."
+    mkdir -p ~/.config/i3status
+    ln -s "$wd/.config/i3status/config" ~/.config/i3status
+fi
+
+# Set up .Xresources
+if [ "$(uname)" = "Linux" ]
+then
+    echo "Adding .Xresources config..."
+    ln -s "$wd/.Xresources" ~
+    echo "Installing DejaVu font..."
+    sudo ln -s "$wd/fonts/DejaVuSansMono" /usr/share/fonts
+    fc-cache -f
+    echo "Installing urxvt font-size extension..."
+    mkdir -p ~/.urxvt/ext
+    ln -s "$wd/.urxvt/ext/font-size" ~/.urxvt/ext
 fi
