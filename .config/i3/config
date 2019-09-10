@@ -131,7 +131,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Assign workspaces
-for_window [class="Spotify"] move to workspace $ws10 # Spotify is special
+for_window [class="Spotify"] move to workspace $ws10
 assign [class="Skype"] $ws9
 assign [class="whatsdesk"] $ws9
 
@@ -227,3 +227,10 @@ bar {
 # Rofi
 bindsym $mod+space exec "rofi -modi combi -combi-modi window,drun,ssh -show combi" 
 
+# i3-gaps
+for_window [class=".*"] border pixel 0
+gaps inner 10
+gaps outer 10
+
+# Wallpaper
+# feh --bg-center /usr/share/wallpapers/firewatch-remote.jpg
