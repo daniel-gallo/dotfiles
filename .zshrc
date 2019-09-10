@@ -42,3 +42,9 @@ alias pls="sudo \$(fc -ln -1)"
 fpath+=("$HOME/.zsh/pure")
 promptinit
 prompt pure 
+
+# Enable history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
