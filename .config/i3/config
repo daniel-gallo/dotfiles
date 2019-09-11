@@ -18,7 +18,8 @@ set $mod Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 # font pango:DejaVu Sans Mono 10
-font pango:DejaVu Sans Mono for Powerline 12
+# font pango:DejaVu Sans Mono for Powerline 12
+font pango:Cantarell 12
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -231,6 +232,7 @@ bindsym $mod+space exec "rofi -modi combi -combi-modi window,drun,ssh -show comb
 for_window [class=".*"] border pixel 0
 gaps inner 10
 gaps outer 10
+border_radius 4
 
 # Wallpaper
 # feh --bg-center /usr/share/wallpapers/firewatch-remote.jpg
