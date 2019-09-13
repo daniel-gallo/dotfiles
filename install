@@ -39,6 +39,14 @@ then
     ln -s "$wd/.config/i3status/config" ~/.config/i3status
 fi
 
+# Set up rofi
+if type rofi &> /dev/null
+then
+    echo "Adding rofi config..."
+    mkdir -p ~/.config/rofi
+    ln -s "$wd/.config/rofi/config" ~/.config/rofi 
+fi
+
 # Set up .Xresources
 if [ "$(uname)" = "Linux" ]
 then
