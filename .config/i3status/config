@@ -8,7 +8,7 @@
 
 general {
         colors = false 
-        interval = 5
+        interval = 1
 }
 
 # order += "ipv6"
@@ -24,7 +24,7 @@ order += "tztime local"
 
 cpu_temperature 0 {
     format = " %degrees ºC"
-    path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
+    path = "/sys/devices/platform/coretemp.0/hwmon/*/temp1_input"
 }
 
 memory {
