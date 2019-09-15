@@ -181,7 +181,8 @@ exec_always --no-startup-id xset led on
 exec_always --no-startup-id xset r rate 300 50
 
 # Enable Shift+NUMLK and Num Lock and emulate ESC key
-exec_always --no-startup-id setxkbmap -option keypad:pointerkeys -option caps:escape
+# DISABLED because I have that in /etc/X11/xorg.conf.d/00-keyboard.conf
+# exec_always --no-startup-id setxkbmap -option keypad:pointerkeys -option caps:escape
 # exec_alway --no-startup-id numlockx on
 
 # Media player controls
