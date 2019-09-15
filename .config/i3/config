@@ -171,6 +171,9 @@ mode "resize" {
 # Quick lock (quick because you can lock the screen using the exit_menu.sh
 bindsym $mod+p exec --no-startup-id i3lock --image /usr/share/wallpapers/firewatch-remote.jpg --force-clock --indicator --timecolor ffffffff --datecolor ffffffff --insidecolor 00000099 --line-uses-inside --ringcolor 00000099 --keyhlcolor F99C32FF --bshlcolor e8093bff --insidevercolor 45162abb --ringvercolor 45162abb --ringwrongcolor 45162abb --wrongtext "" --veriftext "" --noinputtext "" --locktext "" --lockfailedtext "" 
 
+# Shutdown shortcut
+bindsym $mod+shift+q exec --no-startup-id i3-msg [class="."] kill && sleep 0.25 && poweroff
+
 # Enable CMStorm keyboard colors
 exec_always --no-startup-id xset led on
 
