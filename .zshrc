@@ -48,3 +48,9 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
+
+# Remap xdg-open to open
+if type xdg-open &> /dev/null
+then
+    alias open=xdg-open
+fi
