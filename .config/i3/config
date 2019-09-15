@@ -168,14 +168,8 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-# Shutdown menu
-bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/exit_menu.sh
-
 # Quick lock (quick because you can lock the screen using the exit_menu.sh
-bindsym $mod+p exec --no-startup-id $HOME/.config/i3/lock.sh
-
-# Shortcut to lock the screen
-# bindsym $mod+Shift+x exec --no-startup-id ~/.config/i3/lock.sh
+bindsym $mod+p exec --no-startup-id i3lock --image /usr/share/wallpapers/firewatch-remote.jpg --force-clock --indicator --timecolor ffffffff --datecolor ffffffff --insidecolor 00000099 --line-uses-inside --ringcolor 00000099 --keyhlcolor F99C32FF --bshlcolor e8093bff --insidevercolor 45162abb --ringvercolor 45162abb --ringwrongcolor 45162abb --wrongtext "" --veriftext "" --noinputtext "" --locktext "" --lockfailedtext "" 
 
 # Enable CMStorm keyboard colors
 exec_always --no-startup-id xset led on
@@ -202,12 +196,13 @@ set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
+set $bar-color           #190B1B
 
 # window colors
 #                       border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 # Hide borders
@@ -217,17 +212,17 @@ hide_edge_borders both
 bar {
   	status_command i3status 
 	colors {
-		background $bg-color
-	    	separator #757575
+		background $bar-color
+	    separator  $bar-color
 		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+        focused_workspace  $bar-color         $bar-color         $text-color
+        inactive_workspace $bar-color         $bar-color         $inactive-text-color
+        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
 }
 
 # Rofi
-bindsym $mod+space exec "rofi -modi combi -combi-modi window,drun,ssh -show combi" 
+bindsym $mod+space exec "rofi -modi combi -combi-modi drun,window,ssh -show combi" 
 
 # i3-gaps
 for_window [class=".*"] border pixel 0
