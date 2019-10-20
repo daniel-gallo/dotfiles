@@ -54,3 +54,10 @@ if type xdg-open &> /dev/null
 then
     alias open=xdg-open
 fi
+
+# Enable SSH agent
+if [ "$(uname)" = "Linux" ]
+then
+    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
+
