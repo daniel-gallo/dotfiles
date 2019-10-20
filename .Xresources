@@ -1,6 +1,6 @@
 ! URxvt options
 ! Enable extensions
-URXvt.perl-ext-common:       default, clipboard, tabbed, matcher, font-size
+URXvt.perl-ext-common:       default, clipboard, matcher, font-size
 ! Customize scrollbar
 URxvt*scrollBar:             true
 URxvt*thickness:             5
@@ -27,7 +27,6 @@ URxvt.iso14755:              false
 URxvt.iso14755_52:           false
 ! Customize font
 URxvt.font:                  xft:DejaVu Sans Mono for Powerline:size=11:antialiasing=True
-
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
 *.background: #282A36
