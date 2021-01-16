@@ -1,63 +1,41 @@
-autoload -U compinit promptinit
+# Make brew install packages faster (use homebrew-autoupdate)
+export HOMEBREW_AUTO_UPDATE_SECS="86400"
 
-# Autocompletion
-compinit
-# Enable arrow-key autocompletion
-zstyle ':completion:*' menu select
-# Autocomplete aliases
-setopt COMPLETE_ALIASES
-# Enable privileged autocompletion
-zstyle ':completion::complete:*' gain-privileges 1
+# Make Python 3 the default Python installation
+alias python=python3
+alias pip=pip3
 
-# Syntax highlighting (requires zsh-syntax-highlighting)
-source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Enable completion
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
-# Autosuggestions (requires zsh-autosuggestions)
-source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+    autoload -Uz compinit
+    # Update the cache once a day
+    for dump in ~/.zcompdump(N.mh+24); do
+        compinit
+    done
+    compinit -C
+    
+    # Use block-style selection
+    zstyle ':completion:*' menu select
 
-# Z (jump between recent folders)
-source $HOME/.zsh/zsh-z/zsh-z.plugin.zsh
-
-# Color aliases
-# macOS and Linux have different ls color options
-if [ "$(uname)" = "Darwin" ]
-then
-    alias ls='ls -G'
-else
-    alias ls='ls --color=auto'
-fi
-alias grep='grep  --color=auto'
-
-# Set vim as default
-alias vi=vim
-alias svi='sudo vim'
-alias svim='sudo vim'
-alias edit='vim'
-
-# Canadian command
-alias please="sudo \$(fc -ln -1)"
-alias pls="sudo \$(fc -ln -1)"
-
-# Prompt customization
-fpath+=("$HOME/.zsh/pure")
-promptinit
-prompt pure 
-
-# Enable history
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory
-
-# Remap xdg-open to open
-if type xdg-open &> /dev/null
-then
-    alias open=xdg-open
+    # Case insensitive path-completion 
+    zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 fi
 
-# Enable SSH agent
-if [ "$(uname)" = "Linux" ]
-then
-    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-fi
+# Colored ls
+export CLICOLOR=True
 
+# Autosuggestions based on history and completions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Prompt
+eval "$(starship init zsh)"
+
+# Syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# History substring
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
