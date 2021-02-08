@@ -3,7 +3,7 @@ export HOMEBREW_AUTO_UPDATE_SECS="86400"
 
 # Make Python 3 the default Python installation
 alias python=python3
-alias pip=pip3
+export PATH=/usr/local/Cellar/python@3.9/3.9.1_8/Frameworks/Python.framework/Versions/3.9/bin:$PATH
 
 # Enable completion
 if type brew &>/dev/null; then
