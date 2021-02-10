@@ -21,6 +21,7 @@ First of all, these packages should be installed:
 - zsh-completions
 - zsh-history-substring-search
 - zsh-syntax-highlighting
+- z
 
 Then, just run the following:
 
