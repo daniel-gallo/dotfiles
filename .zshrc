@@ -1,5 +1,6 @@
 # Make Python 3 the default Python installation
 alias python=python3
+alias pip=pip3
 
 # Enable completion
 if type brew &>/dev/null; then
