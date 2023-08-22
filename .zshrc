@@ -1,6 +1,3 @@
-# Make brew install packages faster (use homebrew-autoupdate)
-export HOMEBREW_AUTO_UPDATE_SECS="86400"
-
 # Make Python 3 the default Python installation
 alias python=python3
 
