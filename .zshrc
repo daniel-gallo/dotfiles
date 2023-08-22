@@ -16,7 +16,7 @@ if type brew &>/dev/null; then
     # Use block-style selection
     zstyle ':completion:*' menu select
 
-    # Case insensitive path-completion 
+    # Case insensitive path-completion
     zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 fi
 
