@@ -37,5 +37,6 @@ source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-se
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# Z jump around
-. /opt/homebrew/etc/profile.d/z.sh
+# zoxide
+eval "$(zoxide init zsh)"
+
