@@ -5,6 +5,7 @@
 I use these dotfiles on macOS.
 
 - My computer runs `brew update` and `brew upgrade` every day (using [homebrew-autoupdate](https://github.com/DomT4/homebrew-autoupdate)) so I don't have to wait for my computer to update all of its packages every time I use `brew`.
+- As a terminal emulator I use [WezTerm](https://wezfurlong.org/wezterm/index.html), which comes with a multiplexer built-in (so no need for tmux).
 - I use vanilla `zsh` as my shell. Even though no frameworks are used, I enjoy these features:
   - Case insensitive block-style completion
   - Autosuggestions based on history
