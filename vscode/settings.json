@@ -1,0 +1,183 @@
+{
+    // Aesthetics
+    "breadcrumbs.enabled": true,
+    "chat.commandCenter.enabled": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+    "terminal.integrated.fontLigatures.enabled": true,
+    "editor.fontSize": 13,
+    "editor.minimap.enabled": false,
+    "editor.smoothScrolling": true,
+    "editor.stickyScroll.enabled": true,
+    "terminal.integrated.smoothScrolling": true,
+    "window.commandCenter": false,
+    "workbench.preferredDarkColorTheme": "Catppuccin Noctis Macchiato",
+    "workbench.colorTheme": "Catppuccin Noctis Latte",
+    "window.autoDetectColorScheme": true,
+    "workbench.layoutControl.enabled": false,
+    "workbench.list.smoothScrolling": true,
+    "workbench.sideBar.location": "right",
+    "workbench.tree.enableStickyScroll": true,
+    "workbench.tree.indent": 28,
+    // General
+    "editor.formatOnSave": true,
+    "accessibility.signalOptions.volume": 0,
+    "editor.inlineSuggest.enabled": false,
+    // VSCode
+    "latex-workshop.formatting.latex": "latexindent",
+    // Python
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    "notebook.formatOnSave.enabled": true,
+    "notebook.defaultFormatter": "charliermarsh.ruff",
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "ruff.codeAction.disableRuleComment": {
+        "enable": false
+    },
+    // Vim
+    // Repeatable (un)indent
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            // Go to definition in another split (gD)
+            "before": ["g", "D"],
+            "commands": ["editor.action.revealDefinitionAside"]
+        },
+        {
+            // We can go to definition using gd, with this we can go back using gB (gb is already taking for adding a cursor)
+            "before": ["g", "B"],
+            "commands": ["workbench.action.navigateBack"]
+        },
+        {
+            // Go to References
+            "before": ["g", "r"],
+            "commands": ["editor.action.referenceSearch.trigger"]
+        },
+        {
+            // Go to previous Change
+            "before": ["[", "c"],
+            "commands": ["workbench.action.editor.previousChange"]
+        },
+        {
+            // Go to next Change
+            "before": ["]", "c"],
+            "commands": ["workbench.action.editor.nextChange"]
+        },
+        {
+            // Select a larger syntax node
+            "before": ["[", "x"],
+            "commands": ["editor.action.smartSelect.expand"]
+        },
+        {
+            // Select a smaller syntax node
+            "before": ["]", "x"],
+            "commands": ["editor.action.smartSelect.shrink"]
+        },
+        {
+            // Quick fix
+            "before": ["g", "."],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            // Next diagnostic (error, warning, info)
+            "before": ["[", "d"],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            // Previous diagnostic (error, warning, info)
+            "before": ["]", "d"],
+            "commands": ["editor.action.marker.prev"]
+        },
+        {
+            // Open link (go to file) under cursor
+            "before": ["g", "f"],
+            "commands": ["editor.action.openLink"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            // Go to definition in another split (gD)
+            "before": ["g", "D"],
+            "commands": ["editor.action.revealDefinitionAside"]
+        },
+        {
+            // We can go to definition using gd, with this we can go back using gB (gb is already taking for adding a cursor)
+            "before": ["g", "B"],
+            "commands": ["workbench.action.navigateBack"]
+        },
+        {
+            // Go to References
+            "before": ["g", "r"],
+            "commands": ["editor.action.referenceSearch.trigger"]
+        },
+        {
+            // Go to previous Change
+            "before": ["[", "c"],
+            "commands": ["workbench.action.editor.previousChange"]
+        },
+        {
+            // Go to next Change
+            "before": ["]", "c"],
+            "commands": ["workbench.action.editor.nextChange"]
+        },
+        {
+            // Select a larger syntax node
+            "before": ["[", "x"],
+            "commands": ["editor.action.smartSelect.expand"]
+        },
+        {
+            // Select a smaller syntax node
+            "before": ["]", "x"],
+            "commands": ["editor.action.smartSelect.shrink"]
+        },
+        {
+            // Quick fix
+            "before": ["g", "."],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            // Next diagnostic (error, warning, info)
+            "before": ["[", "d"],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            // Previous diagnostic (error, warning, info)
+            "before": ["]", "d"],
+            "commands": ["editor.action.marker.prev"]
+        },
+        {
+            // Open link (go to file) under cursor
+            "before": ["g", "f"],
+            "commands": ["editor.action.openLink"]
+        }
+    ],
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "jupyter.askForKernelRestart": false,
+    "security.promptForRemoteFileProtocolHandling": false,
+    "git.blame.editorDecoration.enabled": true,
+    "git.blame.statusBarItem.enabled": true,
+    "workbench.preferredLightColorTheme": "Catppuccin Noctis Latte",
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "cSpell.userWords": ["overfitting"],
+    "gitlens.views.searchAndCompare.files.layout": "tree"
+}

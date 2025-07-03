@@ -1,0 +1,101 @@
+[
+    {
+        "key": "shift shift",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+left",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+down",
+        "command": "editor.action.revealDefinition"
+    },
+    {
+        "key": "cmd+b",
+        "command": "editor.action.goToReferences"
+    },
+    {
+        "key": "cmd+k d",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+k w",
+        "command": "workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "cmd+k cmd+w",
+        "command": "workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "toggleVim"
+    },
+    {
+        "key": "shift+cmd+t",
+        "command": "workbench.action.terminal.new"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "editor.action.insertCursorBelow"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "editor.action.insertCursorAbove"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.quickFix"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "editor.action.commentLine"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.killActiveTab",
+        "when": "panelFocus"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+r",
+        "command": "code-runner.run"
+    },
+    {
+        "key": "cmd+r",
+        "command": "python.execInTerminal-icon"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+d",
+        "command": "-extension.vim_cmd+d",
+        "when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-extension.vim_ctrl+e",
+        "when": "editorTextFocus && vim.active && vim.use<C-e> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-extension.vim_ctrl+a",
+        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+    },
+    {
+        "key": "cmd+c",
+        "command": "-extension.vim_cmd+c",
+        "when": "editorTextFocus && vim.active && vim.overrideCopy && vim.use<D-c> && !inDebugRepl"
+    }
+]
